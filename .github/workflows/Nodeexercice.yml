@@ -1,0 +1,13 @@
+name: nodeexo
+on:
+  workflow_dispatch:
+jobs:
+  jobs1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setupnode@v6.1.0
+  jobs2:
+    needs: jobs1
+    runs-on: ubuntu-latest
+    steps:
+        - run : node -v
